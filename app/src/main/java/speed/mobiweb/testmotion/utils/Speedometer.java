@@ -135,7 +135,7 @@ public class Speedometer extends View implements SpeedChangeListener {
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
 
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
-        int heightSize = View.MeasureSpec.getSize(heightMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
 
         int chosenWidth = chooseDimension(widthMode, widthSize);
         int chosenHeight = chooseDimension(heightMode, heightSize);
@@ -188,7 +188,7 @@ public class Speedometer extends View implements SpeedChangeListener {
     }
 
     private void drawLegend(Canvas canvas){
-        canvas.save(Canvas.MATRIX_SAVE_FLAG);
+        canvas.save(/*Canvas.MATRIX_SAVE_FLAG*/);
         canvas.rotate(-180, centerX,centerY);
         Path circle = new Path();
         double halfCircumference = radius * Math.PI;

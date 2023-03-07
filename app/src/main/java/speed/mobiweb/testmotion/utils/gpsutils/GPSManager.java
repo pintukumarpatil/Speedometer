@@ -9,9 +9,10 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 
 import java.util.List;
+
+import androidx.core.app.ActivityCompat;
 
 public class GPSManager {
     private static final int gpsMinTime = 500;
@@ -112,9 +113,7 @@ public class GPSManager {
             }
 
             GPSManager.locationManager = null;
-        }
-        catch (final Exception ex)
-        {
+        } catch (final Exception ex) {
 
         }
     }
